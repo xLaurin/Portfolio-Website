@@ -1,0 +1,172 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 39% 59%;
+    grid-template-rows: 100%;
+    column-gap: 2%;
+}
+/*---------------------------------------------------------*/
+/* Linker Container */
+
+.grid-container-1 {
+    background-color: #0e1114;
+    grid-area: 1 / 1 / span 1 / span 1;
+
+    display: grid;
+    grid-template: 5% 85% 10% / 1fr 1fr 1fr 1fr;
+}
+
+.grid-container-1 article {
+    padding: 5% 5% 0 5%;
+    grid-area: 2 / 1 / span 1 / span 4;
+
+}
+
+.AboutMe-Bild {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.AboutMe-Bild img {
+    width: 20%;
+    border-radius: 50%;
+    border: 3px solid rgb(43, 43, 43);
+}
+
+.AboutMe-Bild h3 {
+    margin: 15px;
+}
+
+.AboutMe-Text {
+    justify-items: center;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.AboutMe-Text a {
+    color: white;
+    text-decoration: none;
+}
+
+.AboutMe-Text h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.social-media-icons {
+    grid-area: 3 / 1 / span 1 / span 4;
+}
+
+.social-media-icons ul {
+    color: white;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 50px;
+}
+
+.grid-container-1 .social-media-icons a {
+    color: white;
+    background-color: #0e1114;
+    border: 2px solid #161a1f;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.social-media-icons li a {
+    font-style: bold;
+
+}
+
+/*---------------------------------------------------------*/
+/* Rechter Container */
+
+.grid-container-2 {
+    background-color: black;
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+.container2-content {
+    height: 95%;
+    overflow-y: auto;
+    padding-bottom: 1%;
+    padding-top: 2%;
+}
+
+.container2-content .content {
+    background-color: #0e1114;
+    border-radius: 10px;
+    margin-right: 2%;
+    width: 98%;
+}
+
+.container2-content .content article {
+    display: flex;
+    flex-direction: row;
+  
+}
+
+.content article img {
+    margin-left: 10px;
+    margin-bottom: 20px;;
+    width: 20%;
+    border-radius: 5px;
+}
+
+.container2-content h4{
+    padding: 20px 15px 0 15px;
+}
+
+.container2-content p{
+    padding: 0 15px 15px 15px;
+}
+
+
+/*---------------------------------------------------------*/
+/* Responive Website */
+
+
+@media screen and (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 4%;
+    }
+    
+    .grid-container-1 {
+        background-color: #0e1114;
+        grid-area: 1 / 1 / span 1 / span 1;
+        padding-bottom: 40px;
+    }
+
+    .social-media-icons ul {
+        color: white;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-right: 50px;
+        margin-top: 25px;
+    }
+    
+    .grid-container-2 {
+        background-color: black;
+        grid-area: 2 / 1 / span 1 / span 1;
+    }
+
+    .container2-content {
+        height: 100%;
+    }
+}
